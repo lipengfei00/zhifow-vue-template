@@ -1,0 +1,57 @@
+{
+  "name": "{{name}}",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    {{#envPackage}}
+    "serve-dev": "vue-cli-service serve --model development",
+    "serve-test": "vue-cli-service serve --model test",
+    "serve-production": "vue-cli-service serve --model production",
+    "build-dev": "vue-cli-service build --model development",
+    "build-test": "vue-cli-service build --model test",
+    "build-production": "vue-cli-service build --model production",
+    {{/envPackage}}
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    {{#if_eq thirdParty "ant-design-vue"}}
+    "ant-design-vue": "^1.7.4",
+    {{/if_eq}}
+    {{#if_eq thirdParty "element-ui"}}
+    "element-ui": "^2.15.1",
+    {{/if_eq}}
+    "core-js": "^3.6.5",
+    {{#router}}
+    "vue-router": "^3.2.0",
+    {{/router}}
+    {{#vuex}}
+    "vuex": "^3.4.0",
+    {{/vuex}}
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    {{#if_eq cssPreprocessor "scss"}}
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    {{/if_eq}}
+    {{#if_eq cssPreprocessor "less"}}
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    {{/if_eq}}
+    {{#if_eq cssPreprocessor "stylus"}}
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    {{/if_eq}}
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
