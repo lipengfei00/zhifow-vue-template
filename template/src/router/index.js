@@ -14,7 +14,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: {{#if envPackage}} process.env.VUE_APP_NAME {{else}} '/' {{/if}},
+  base: {{#if envPackage}}process.env.VUE_APP_NAME{{else}}'/'{{/if}},
   routes
 })
 
