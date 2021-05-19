@@ -10,9 +10,9 @@ const Version = new Date().getTime()
 
 
 module.exports = {
-  publicPath: process.env.VUE_APP_PUBLISHPATH,
+  publicPath: {{#if envPackage}}process.env.VUE_APP_PUBLISHPATH {{else}} '/' {{/if}},
   lintOnSave: false,
-  outputDir: process.env.VUE_APP_OUTPUTDIR,
+  outputDir: {{#if envPackage}}process.env.VUE_APP_OUTPUTDIR {{else}} '/dist' {{/if}},
   devServer: {
     host: '0.0.0.0',
     port: 8080,
@@ -20,7 +20,7 @@ module.exports = {
     // 配置多个代理
     proxy: {
       '/zyqm': {
-        target: process.env.VUE_APP_TARGET,
+        target: {{#if envPackage}}process.env.VUE_APP_TARGET {{else}} '/' {{/if}},
         ws: false,
         changeOrigin: true,
         pathRewrite: {
