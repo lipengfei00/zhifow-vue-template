@@ -34,6 +34,8 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
+    "lib-flexible": "^0.3.2",
+    "postcss-pxtorem": "^5.1.1",
     "@vue/cli-service": "~4.5.0",
     {{#if_eq cssPreprocessor "scss"}}
     "node-sass": "^4.12.0",
