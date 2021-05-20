@@ -5,12 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     {{#envPackage}}
-    "serve:dev": "vue-cli-service serve --model dev",
-    "serve:test": "vue-cli-service serve --model test",
-    "serve:prod": "vue-cli-service serve --model prod",
-    "build:dev": "vue-cli-service build --model dev",
-    "build:test": "vue-cli-service build --model test",
-    "build:prod": "vue-cli-service build --model prod",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "serve:test": "vue-cli-service serve --mode test",
+    "serve:prod": "vue-cli-service serve --mode prod",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:test": "vue-cli-service build --mode test",
+    "build:prod": "vue-cli-service build --mode prod",
     {{/envPackage}}
     "build": "vue-cli-service build"
   },

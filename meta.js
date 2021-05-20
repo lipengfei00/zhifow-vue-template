@@ -114,7 +114,7 @@ module.exports = {
     emptyVueConfig: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Create an empty vue.config.js',
+      message: 'Create empty vue.config.js',
     },
     envPackage: {
       when: 'isNotTest',
