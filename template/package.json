@@ -16,13 +16,13 @@
   },
   "dependencies": {
     {{#if_eq thirdParty "ant-design-vue"}}
-    "ant-design-vue": "latest",
+    "ant-design-vue": ">=1.7.4",
     {{/if_eq}}
     {{#if_eq thirdParty "element-ui"}}
-    "element-ui": "latest",
+    "element-ui": ">=2.15.1",
     {{/if_eq}}
     {{#if_eq thirdParty "vant"}}
-    "vant": "latest",
+    "vant": ">=2.5.0",
     {{/if_eq}}
     "core-js": "^3.6.5",
     {{#router}}
