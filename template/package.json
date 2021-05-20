@@ -21,6 +21,9 @@
     {{#if_eq thirdParty "element-ui"}}
     "element-ui": "^2.15.1",
     {{/if_eq}}
+    {{#if_eq thirdParty "vant"}}
+    "vant": "^2.5.0",
+    {{/if_eq}}
     "core-js": "^3.6.5",
     {{#router}}
     "vue-router": "^3.2.0",

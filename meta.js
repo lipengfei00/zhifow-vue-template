@@ -94,6 +94,11 @@ module.exports = {
           short: 'ant-design-vue',
         },
         {
+          name: 'vant',
+          value: 'vant',
+          short: 'vant',
+        },
+        {
           name: 'other',
           value: 'other',
           short: 'other',
