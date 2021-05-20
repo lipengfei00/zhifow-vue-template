@@ -40,18 +40,18 @@ module.exports = {
 
     // 为预处理器的 loader 传递自定义选项。比如传递给
     // sass-loader 时，使用 `{ sass: { ... } }`。
-    // loaderOptions: {
-    //   postcss: {
-    //     plugins: [
-    //       require('postcss-pxtorem')({
-    //         rootValue: 100, // 换算的基数
-    //         selectorBlackList: [], // 忽略转换正则匹配项
-    //         propList: ['*'],
-    //         minPixelValue: 2,
-    //       }),
-    //     ],
-    //   },
-    // },
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            rootValue: 75, // 换算的基数
+            selectorBlackList: [], // 忽略转换正则匹配项
+            propList: ['*'],
+            minPixelValue: 2,
+          }),
+        ],
+      },
+    },
   },
   chainWebpack: config => {
     config.resolve.alias.set('@', resolve('src'))
